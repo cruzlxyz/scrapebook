@@ -1,4 +1,4 @@
-# media-download
+# scrapebook
 
 Kumpulan resep download video dari platform sosial — TikTok, X/Twitter,
 Instagram, YouTube, Reddit, Vimeo, Facebook. Dibangun di atas `yt-dlp` dengan
@@ -17,17 +17,17 @@ dan bagaimana pakai repo ini tanpa perlu baca README.
 ```bash
 # Untuk Hermes Agent:
 mkdir -p ~/.hermes/skills/productivity
-cp SKILL.md ~/.hermes/skills/productivity/media-download/SKILL.md
+cp SKILL.md ~/.hermes/skills/productivity/scrapebook/SKILL.md
 
 # Untuk OpenClaw:
-cp SKILL.md ~/.openclaw/skills/media-download.md
+cp SKILL.md ~/.openclaw/skills/scrapebook.md
 ```
 
 **Opsi B: Pakai sebagai repo (untuk script manual)**
 
 ```bash
-git clone https://github.com/0xcruzl/media-download
-cd media-download
+git clone https://github.com/cruzlxyz/scrapebook
+cd scrapebook
 pip install -r requirements.txt    # yt-dlp, curl_cffi
 bash install.sh                    # symlink wrapper scripts
 ```
@@ -48,7 +48,7 @@ Selesai. Tinggal run script di `examples/` atau ikutin resep di `SKILL.md`.
 ## Struktur repo
 
 ```
-media-download/
+scrapebook/
 ├── README.md                   # file ini
 ├── SKILL.md                    # manifest skill (drop ke ~/.hermes/skills/)
 ├── install.sh                  # installer satu baris
@@ -171,7 +171,7 @@ shell execution, browser automation, dan filesystem access. Terverifikasi jalan 
 
 - **[Hermes Agent](https://github.com/hermes-agent/hermes-agent)** — environment
   authoring utama. Langsung jalan via toolset `terminal`, `browser`, dan `file`.
-  Untuk hasil terbaik, copy `SKILL.md` ke `~/.hermes/skills/productivity/media-download/SKILL.md`.
+  Untuk hasil terbaik, copy `SKILL.md` ke `~/.hermes/skills/productivity/scrapebook/SKILL.md`.
 - **OpenClaw** — jalan dengan cara yang sama; tool `shell_exec` + `browser_navigate`
   OpenClaw cover semua resep di repo ini. Pakai script di `examples/` sebagai
   template task OpenClaw.

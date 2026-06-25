@@ -1,10 +1,10 @@
 ---
-name: media-download
+name: scrapebook
 description: Download video dan audio dari platform sosial (X/Twitter, TikTok, YouTube, Instagram, Reddit, Vimeo, Facebook) pake yt-dlp. Cover install PEP 668, workflow test-before-download, quirks URL ID resolution, deteksi deleted/private, format cookie Camofox/Playwright (konversi Netscape → Playwright JSON), dan X/Twitter syndication API buat ekstraksi URL video tanpa login. Pake skill ini waktu user minta download, simpan, atau arsipkan video/audio dari URL sosial media.
 tags: [media, download, video, audio, yt-dlp, social-media, x, twitter, tiktok, youtube, gallery-dl, cookies, authenticated, impersonate, curl_cffi]
 ---
 
-# media-download
+# scrapebook
 
 Download video dan audio dari platform sosial. Tool utama: **yt-dlp**. Fallback: syndication API, scrape Camofox, Playwright + browser context.
 
@@ -15,17 +15,17 @@ Cukup copy `SKILL.md` ini ke folder skills agent. Gak perlu clone repo penuh kal
 ```bash
 # Untuk Hermes Agent:
 mkdir -p ~/.hermes/skills/productivity
-cp SKILL.md ~/.hermes/skills/productivity/media-download/SKILL.md
+cp SKILL.md ~/.hermes/skills/productivity/scrapebook/SKILL.md
 
 # Untuk OpenClaw:
-cp SKILL.md ~/.openclaw/skills/media-download.md
+cp SKILL.md ~/.openclaw/skills/scrapebook.md
 ```
 
 Atau clone repo penuh kalau mau run script manual:
 
 ```bash
-git clone https://github.com/0xcruzl/media-download
-cd media-download
+git clone https://github.com/cruzlxyz/scrapebook
+cd scrapebook
 pip install -r requirements.txt    # yt-dlp, curl_cffi
 bash install.sh                    # symlink wrapper scripts
 ```
@@ -33,7 +33,7 @@ bash install.sh                    # symlink wrapper scripts
 ## Struktur repo
 
 ```
-media-download/
+scrapebook/
 ├── README.md
 ├── SKILL.md                      # file ini
 ├── install.sh
